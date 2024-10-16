@@ -23,7 +23,7 @@ public class SaveLoadManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Destroy(gameObject);
+            Destroy(instance);
         }
         else
         {
@@ -96,9 +96,6 @@ public class SaveLoadManager : MonoBehaviour
         
         //将json字符串写入文件
         File.WriteAllText(resultPath, jsonDate);
-    
-        Debug.Log(resultPath);
-        //C:\Users\kiven\AppData\LocalLow\DefaultCompany\GameJam\SAVE
     }
 
 

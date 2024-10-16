@@ -24,7 +24,7 @@ public class BackMenuUI : MonoBehaviour
 
     public void ControlCanBackMenu()
     {
-        if (SceneManager.GetActiveScene().name != "Menu")
+        if (SceneManager.GetActiveScene().name != "Persistent")
         {
             _canBackMenu = true;
         }

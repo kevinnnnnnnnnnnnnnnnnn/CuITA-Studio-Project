@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Overlays;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -50,28 +47,22 @@ public class DoorOpen : MonoBehaviour
 
     private void Update()
     {
-        TryOpenDoor();
+        OpenDoor();
     }
 
 
     /// <summary>
     /// 比较当前光球和最大光球，判断是否开启传送门
     /// </summary>
-    public void TryOpenDoor()
+    public void OpenDoor()
     {
         if (CollectLightManager.instance.currentCollectLightNum == CollectLightManager.instance.maxCollectLightNum)
         {
-            OpenDoor();
+            door.SetActive(true);
+            _isDoorOpen = true;
+            
+            DoorOpenManager.instance.isOpenDoorDict[this.name] = _isDoorOpen;
         }
-    }
-
-    public void OpenDoor()
-    {
-        Debug.Log("open");
-        door.SetActive(true);
-        _isDoorOpen = true;
-
-        DoorOpenManager.instance.isOpenDoorDict[this.name] = _isDoorOpen;
     }
     
     

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Rendering.Universal;
+
 
 public class TransitionManager : MonoBehaviour,ISaveable
 {
@@ -182,6 +184,11 @@ public class TransitionManager : MonoBehaviour,ISaveable
         player.transform.position = new Vector3(targetX, targetY + 1f, player.transform.position.z);
         SpriteRenderer spr = player.GetComponent<SpriteRenderer>();
         spr.flipX = !spr.flipX;
+        
+        if(SceneManager.GetActiveScene().name != "Persistent")
+            PlayerLightManager.instance.playerLight.GetComponent<Light2D>().intensity = PlayerLightManager.instance.playerFirstLight;
+        else if (SceneManager.GetActiveScene().name == "Persistent")
+            PlayerLightManager.instance.playerLight.GetComponent<Light2D>().intensity = PlayerLightManager.instance.playerMenuLight;
     }
 
 

@@ -42,6 +42,8 @@ public class Menu : MonoBehaviour
         TransitionManager.instance.canTransition = true;
         TransitionManager.instance.Transition(currentScene, "Menu", -5, 1.5f);
         TransitionManager.instance.canTransition = false;
+        
+        Debug.Log("Back to Menu");
     }
 
 
@@ -50,5 +52,11 @@ public class Menu : MonoBehaviour
         toScene = TransitionManager.instance.currentScene;
         targetX = TransitionManager.instance.currentPosX;
         targetY = TransitionManager.instance.currentPosY;
+    }
+
+
+    public void debuger()
+    {
+        Debug.Log("Menu debuger");
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 控制玩家子物体光源的亮度
@@ -14,6 +15,7 @@ public class PlayerLightManager : MonoBehaviour
     [SerializeField] private float playerLightStrength;//玩家总共增加的光照强度
     [SerializeField] public GameObject playerLight;//玩家的子物体光源
     [SerializeField] public float playerFirstLight;//玩家最初的光源亮度
+    [SerializeField] public float playerMenuLight;//玩家在Menu场景的光源亮度
 
 
     private void Awake()
@@ -31,7 +33,8 @@ public class PlayerLightManager : MonoBehaviour
 
     private void Start()
     {
-        playerLight.GetComponent<Light2D>().intensity = playerFirstLight;
+        if (SceneManager.GetActiveScene().name == "Persistent")
+            playerLight.GetComponent<Light2D>().intensity = playerMenuLight;
     }
 
 
