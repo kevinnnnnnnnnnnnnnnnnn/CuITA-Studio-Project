@@ -25,7 +25,11 @@ public class DoorOpen : MonoBehaviour
         doorLight.SetActive(false);
         doorLight.GetComponent<Light2D>().intensity = 0;
 
-        if (DoorOpenManager.instance == null) return;
+        if (DoorOpenManager.instance == null)
+        {
+            Debug.Log("door open manager is null");
+            return;
+        }
         DoorOpenManager.instance.isOpenDoorDict.TryAdd(this.name, _isDoorOpen);
 
         if (DoorOpenManager.instance.isOpenDoorDict[this.name])
@@ -58,16 +62,19 @@ public class DoorOpen : MonoBehaviour
     {
         if (CollectLightManager.instance.currentCollectLightNum == CollectLightManager.instance.maxCollectLightNum)
         {
-            door.SetActive(true);
-            _isDoorOpen = true;
-            
+            OpenDirectly();
+
             DoorOpenManager.instance.isOpenDoorDict[this.name] = _isDoorOpen;
         }
     }
-    
-    
 
-    
+    public void OpenDirectly()
+    {
+        door.SetActive(true);
+        _isDoorOpen = true;
+    }
+
+
     //使用协程，延迟一定时间后再打开传送门光源
     private void OnTriggerEnter2D(Collider2D other)
     {
