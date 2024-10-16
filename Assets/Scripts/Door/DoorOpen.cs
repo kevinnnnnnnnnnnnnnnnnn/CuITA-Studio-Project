@@ -27,8 +27,8 @@ public class DoorOpen : MonoBehaviour
         door.SetActive(false);
         doorLight.SetActive(false);
         doorLight.GetComponent<Light2D>().intensity = 0;
-        
-        
+
+        if (DoorOpenManager.instance == null) return;
         DoorOpenManager.instance.isOpenDoorDict.TryAdd(this.name, _isDoorOpen);
 
         if (DoorOpenManager.instance.isOpenDoorDict[this.name])
@@ -50,22 +50,28 @@ public class DoorOpen : MonoBehaviour
 
     private void Update()
     {
-        OpenDoor();
+        TryOpenDoor();
     }
 
 
     /// <summary>
     /// 比较当前光球和最大光球，判断是否开启传送门
     /// </summary>
-    public void OpenDoor()
+    public void TryOpenDoor()
     {
         if (CollectLightManager.instance.currentCollectLightNum == CollectLightManager.instance.maxCollectLightNum)
         {
-            door.SetActive(true);
-            _isDoorOpen = true;
-            
-            DoorOpenManager.instance.isOpenDoorDict[this.name] = _isDoorOpen;
+            OpenDoor();
         }
+    }
+
+    public void OpenDoor()
+    {
+        Debug.Log("open");
+        door.SetActive(true);
+        _isDoorOpen = true;
+
+        DoorOpenManager.instance.isOpenDoorDict[this.name] = _isDoorOpen;
     }
     
     
