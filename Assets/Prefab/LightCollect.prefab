@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7060938692619520961}
   - component: {fileID: 725196928166781472}
   - component: {fileID: 400858129012607720}
+  - component: {fileID: 1968154364375821992}
   m_Layer: 0
   m_Name: LightCollect
   m_TagString: Untagged
@@ -158,7 +159,7 @@ SpriteRenderer:
   m_SortingLayerID: -1201298411
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc8ad98a0cc47be44a19c26b3d998443, type: 3}
   m_Color: {r: 1, g: 0.8189287, b: 0.4292453, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -181,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba29e25790ab28e4cb2e18e685320399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLightToken: 0
 --- !u!58 &400858129012607720
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -216,3 +218,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1968154364375821992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627671468127046368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb0c65a5cd694daf821736e23434b54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
