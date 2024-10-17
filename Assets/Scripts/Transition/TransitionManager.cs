@@ -22,6 +22,8 @@ public class TransitionManager : MonoBehaviour,ISaveable
     public float currentPosX;
     public float currentPosY;
 
+    public string firstSceneName;
+
     private void Awake()
     {
         if(instance != null)
@@ -38,8 +40,8 @@ public class TransitionManager : MonoBehaviour,ISaveable
     {
         ISaveable saveable = this;
         saveable.SaveableRegister();
-        
-        SceneManager.LoadSceneAsync("Menu", LoadSceneMode.Additive);
+
+        SceneManager.LoadSceneAsync(firstSceneName, LoadSceneMode.Additive);
         player.transform.position = new Vector3(-5, 1.5f, 0);
         EventHandler.CallStartGameEvent(0);
     }

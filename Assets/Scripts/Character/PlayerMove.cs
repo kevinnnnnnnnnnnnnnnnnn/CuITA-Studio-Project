@@ -52,7 +52,7 @@ public class PlayerMove : MonoBehaviour
     {
         //移动
         dirX = Input.GetAxisRaw("Horizontal");
-        _rb.velocity = new Vector3(dirX * moveSpeed, _rb.velocity.y, 0);
+        _rb.velocity = new Vector2(dirX * moveSpeed, _rb.velocity.y);
         
         if(dirX != 0 && !isJumping)
             isMoving = true;
@@ -85,7 +85,8 @@ public class PlayerMove : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.BoxCast(_coll.bounds.center, _coll.bounds.size, 0f, Vector2.down, 0.1f, groundLayer);
+        //return Physics2D.Raycast(_coll.bounds.center, Vector2.down, 0.8f, groundLayer);     
+        return Physics2D.BoxCast(_coll.bounds.center, new Vector2(0.5f,0.5f), 0f, Vector2.down, 0.5f, groundLayer);
     }
     
     
