@@ -24,7 +24,7 @@ namespace Light
         private void OnDestroy()
         {
             transform.DOKill();
-            StopCoroutine(_coroutine);
+            if(_coroutine != null) StopCoroutine(_coroutine);
         }
 
         private IEnumerator Play()

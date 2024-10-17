@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using CulTA;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class CollectLight : MonoBehaviour
 {
@@ -45,7 +42,11 @@ public class CollectLight : MonoBehaviour
             CollectLightManager.instance.isLightTokenDict[gameObject.name] = isLightToken;
             
             gameObject.SetActive(false);
-            CollectLightManager.instance.UpdateCurrentCollectLightNum();        
+            CollectLightManager.instance.UpdateCurrentCollectLightNum();
+
+            // play sfx
+            var sample = GameApplication.BuiltInResources.GetSampleByName("pickupCoin");
+            AudioSource.PlayClipAtPoint(sample, Vector3.zero);
         }
 
     }
