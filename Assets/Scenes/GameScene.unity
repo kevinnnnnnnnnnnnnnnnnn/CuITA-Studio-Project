@@ -11018,6 +11018,10 @@ PrefabInstance:
       propertyPath: sceneTo
       value: GameScene1
       objectReference: {fileID: 0}
+    - target: {fileID: 7484049625746576602, guid: 1ddbb7578c9c3824ebe6ab57757ac0ef, type: 3}
+      propertyPath: targetX
+      value: -13
+      objectReference: {fileID: 0}
     - target: {fileID: 8322578259264295183, guid: 1ddbb7578c9c3824ebe6ab57757ac0ef, type: 3}
       propertyPath: doorLight
       value: 

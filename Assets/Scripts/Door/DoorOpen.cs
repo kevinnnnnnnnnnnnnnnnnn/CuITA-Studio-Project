@@ -105,6 +105,8 @@ public class DoorOpen : MonoBehaviour
     {
         transitionButton.SetActive(false);
         StopCoroutine(_openDoorLightCoroutine);
+
+        doorLight.GetComponent<Light2D>().intensity = doorLightIntensity;
     }
 
 

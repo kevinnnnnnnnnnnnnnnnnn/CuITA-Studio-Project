@@ -1374,6 +1374,10 @@ PrefabInstance:
       value: GameScene2
       objectReference: {fileID: 0}
     - target: {fileID: 7484049625746576602, guid: 1ddbb7578c9c3824ebe6ab57757ac0ef, type: 3}
+      propertyPath: targetX
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484049625746576602, guid: 1ddbb7578c9c3824ebe6ab57757ac0ef, type: 3}
       propertyPath: sceneFrom
       value: GameScene1
       objectReference: {fileID: 0}

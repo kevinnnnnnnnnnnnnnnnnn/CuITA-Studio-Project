@@ -22,6 +22,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpForce = 7f;//跳跃力
     [SerializeField] private LayerMask groundLayer;//判断是否可以跳跃的地面
 
+    private float _originJumpForce;
 
     void Start()
     {
@@ -31,11 +32,12 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        
         _rb = GetComponent<Rigidbody2D>();
         _coll = GetComponent<BoxCollider2D>();
         _spr = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
+        
+        _originJumpForce = jumpForce;
     }
 
 
@@ -44,6 +46,32 @@ public class PlayerMove : MonoBehaviour
         Move();
         ChangeAnim();
     }
+
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Hole")
+        {
+            jumpForce = 20;
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Hole")
+        {
+            jumpForce = _originJumpForce;
+        }
+        else
+        {
+            return;
+        }
+    }
+
 
     /// <summary>
     /// 角色移动和跳跃
@@ -93,6 +121,6 @@ public class PlayerMove : MonoBehaviour
     private void ChangeAnim()
     {
         _anim.SetBool($"isMoving", isMoving);
-        _anim.SetBool($"isJumping", isJumping);      
+        _anim.SetBool($"isJumping", isJumping);
     }
 }
