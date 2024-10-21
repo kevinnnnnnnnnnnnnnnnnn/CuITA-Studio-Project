@@ -43,6 +43,7 @@ public class CollectLight : MonoBehaviour
             
             gameObject.SetActive(false);
             CollectLightManager.instance.UpdateCurrentCollectLightNum();
+            
 
             // play sfx
             var sample = GameApplication.BuiltInResources.GetSampleByName("pickupCoin");

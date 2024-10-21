@@ -16,5 +16,5 @@ public class GameSaveData
     public string currentSceneName;
     public float playerPosX;
     public float playerPosY;
-
+    
 }

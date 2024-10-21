@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CulTA;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     //TODO：挂在Menu的Canvas上，将Canvas挂在Button事件中，实现Menu进入游戏，退出游戏等功能
@@ -12,14 +14,32 @@ public class Menu : MonoBehaviour
     private float targetX;
     private float targetY;
 
+    public Button continueButton;
+
     private void Update()
     {
         UpdatePlayerPos();
+
+        if (continueButton != null)
+        {
+           if (!GameManager.instance.isGameStart)
+           {
+               continueButton.interactable = false;
+           }
+           else
+           {
+               continueButton.interactable = true;
+           }         
+        }
+
     }
 
     public void StartNewGame(string to)
     {
+        Debug.Log("Start New Game");
         EventHandler.CallMenuStartNewGameEvent(to);
+        
+        GameManager.instance.isGameStart = true;
     }
 
     public void ContinueGame()
@@ -54,9 +74,4 @@ public class Menu : MonoBehaviour
         targetY = TransitionManager.instance.currentPosY;
     }
 
-
-    public void debuger()
-    {
-        Debug.Log("Menu debuger");
-    }
 }

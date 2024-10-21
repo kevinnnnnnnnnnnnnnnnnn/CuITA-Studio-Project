@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Step
   - StepPlatform
+  - DeadArea
   layers:
   - Default
   - TransparentFX

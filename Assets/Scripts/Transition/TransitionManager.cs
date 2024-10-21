@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CulTA;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -97,6 +98,9 @@ public class TransitionManager : MonoBehaviour,ISaveable
             //重置新场景光球数量
             CollectLightManager.instance.maxCollectLightNum = 0;
             CollectLightManager.instance.currentCollectLightNum = 0;
+            
+            GameManager.instance.currentScenePlayerPosX = targetX;
+            GameManager.instance.currentScenePlayerPosY = targetY;
         }
     }
 
@@ -126,9 +130,13 @@ public class TransitionManager : MonoBehaviour,ISaveable
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
         SceneManager.SetActiveScene (newScene);
         
-        
         //开启Transition后的事件
         EventHandler.CallAfterTransition(targetX, targetY);
+        
+        if(SceneManager.GetActiveScene().name == "Persistent" || SceneManager.GetActiveScene().name == "Menu")
+            PlayerLightManager.instance.playerLight.GetComponent<Light2D>().intensity = PlayerLightManager.instance.playerMenuLight;
+        else
+            PlayerLightManager.instance.playerLight.GetComponent<Light2D>().intensity = PlayerLightManager.instance.playerFirstLight;
         
         
         yield return Fade(0);//0变透明
@@ -164,8 +172,9 @@ public class TransitionManager : MonoBehaviour,ISaveable
     public void OnBeforeTransition()
     {
         currentScene = SceneManager.GetActiveScene().name;
-        currentPosX = player.transform.position.x;
-        currentPosY = player.transform.position.y;
+        var position = player.transform.position;
+        currentPosX = position.x;
+        currentPosY = position.y;
         
         SaveLoadManager.instance.Save();
         fadePanel.gameObject.SetActive(true);
@@ -186,11 +195,6 @@ public class TransitionManager : MonoBehaviour,ISaveable
         player.transform.position = new Vector3(targetX, targetY + 1f, player.transform.position.z);
         SpriteRenderer spr = player.GetComponent<SpriteRenderer>();
         spr.flipX = !spr.flipX;
-        
-        if(SceneManager.GetActiveScene().name != "Persistent")
-            PlayerLightManager.instance.playerLight.GetComponent<Light2D>().intensity = PlayerLightManager.instance.playerFirstLight;
-        else if (SceneManager.GetActiveScene().name == "Persistent")
-            PlayerLightManager.instance.playerLight.GetComponent<Light2D>().intensity = PlayerLightManager.instance.playerMenuLight;
     }
 
 
@@ -228,7 +232,7 @@ public class TransitionManager : MonoBehaviour,ISaveable
 
         saveData.currentSceneName = this.currentScene;
         saveData.playerPosX = this.currentPosX;
-        saveData.playerPosX = this.currentPosY;
+        saveData.playerPosY = this.currentPosY;
 
         return saveData;
     }

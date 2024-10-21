@@ -15,8 +15,8 @@ public class BackMenuUI : MonoBehaviour
     private void Update()
     {
         ControlCanBackMenu();
-        
-        if(_canBackMenu)
+
+        if (_canBackMenu)
             backMenu.SetActive(true);
         else 
             backMenu.SetActive(false);
@@ -25,13 +25,13 @@ public class BackMenuUI : MonoBehaviour
 
     public void ControlCanBackMenu()
     {
-        if (SceneManager.GetActiveScene().name != "Persistent")
+        if (SceneManager.GetActiveScene().name == "Persistent" || SceneManager.GetActiveScene().name == "Menu")
         {
-            _canBackMenu = true;
+            _canBackMenu = false;
         }
         else
         {
-            _canBackMenu = false;
+            _canBackMenu = true;
         }
     }
 }
