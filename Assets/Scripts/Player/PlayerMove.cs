@@ -88,7 +88,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetButton("Jump") && IsGrounded())
         {
             var sample = GameApplication.BuiltInResources.GetSampleByName("jump");
-            AudioSource.PlayClipAtPoint(sample, Vector3.zero);
+            MonoAudioPlayer.PlayOneShot(sample);
 
             isJumping = true;
             _rb.velocity = new Vector3(_rb.velocity.x, jumpForce, 0);
