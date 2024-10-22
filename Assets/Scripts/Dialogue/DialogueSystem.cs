@@ -49,14 +49,14 @@ public class DialogSystem : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && index == textList.Count)
+        if((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space)) && index == textList.Count)
         {
             gameObject.SetActive(false);
             index = 0;
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
         {
             if(textFinished && !cancelTyping)
             {
