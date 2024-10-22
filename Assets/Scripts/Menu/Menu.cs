@@ -1,11 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using CulTA;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class Menu : MonoBehaviour
 {
     //TODO：挂在Menu的Canvas上，将Canvas挂在Button事件中，实现Menu进入游戏，退出游戏等功能
@@ -29,7 +30,7 @@ public class Menu : MonoBehaviour
            else
            {
                continueButton.interactable = true;
-           }         
+           }
         }
 
     }
@@ -38,7 +39,7 @@ public class Menu : MonoBehaviour
     {
         Debug.Log("Start New Game");
         EventHandler.CallMenuStartNewGameEvent(to);
-        
+
         GameManager.instance.isGameStart = true;
     }
 
@@ -49,20 +50,24 @@ public class Menu : MonoBehaviour
 
     public void ExitGame()
     {
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
     }
 
 
     public void BackToMenu()
     {
         SaveLoadManager.instance.Save();
-        
+
         string currentScene = SceneManager.GetActiveScene().name;
 
         TransitionManager.instance.canTransition = true;
         TransitionManager.instance.Transition(currentScene, "Menu", -5, 1.5f);
         TransitionManager.instance.canTransition = false;
-        
+
         Debug.Log("Back to Menu");
     }
 

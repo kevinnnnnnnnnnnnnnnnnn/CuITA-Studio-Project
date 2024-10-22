@@ -33,6 +33,12 @@ public class TestScriptGameScene
         // do nothing
     }
 
+    [Test]
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Persistent");
+    }
+
     [UnityTest]
     public IEnumerator Door()
     {
