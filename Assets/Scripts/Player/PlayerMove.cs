@@ -1,4 +1,6 @@
+using System;
 using CulTA;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -63,6 +65,22 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("BigSpring"))
+        {
+            _rb.AddForce(new Vector2(0, 50),ForceMode2D.Impulse);
+        }
+        if (other.CompareTag("SmallSpring"))
+        {
+            _rb.AddForce(new Vector2(0, 30),ForceMode2D.Impulse);
+        }
+        if (other.CompareTag("HugeSpring"))
+        {
+            _rb.AddForce(new Vector2(0, 75),ForceMode2D.Impulse);
+        }
+    }
+
 
     /// <summary>
     /// 角色移动和跳跃
@@ -108,7 +126,7 @@ public class PlayerMove : MonoBehaviour
     private bool IsGrounded()
     {
         //return Physics2D.Raycast(_coll.bounds.center, Vector2.down, 0.8f, groundLayer);     
-        return Physics2D.BoxCast(_coll.bounds.center, new Vector2(0.5f,0.5f), 0f, Vector2.down, 0.6f, groundLayer);
+        return Physics2D.BoxCast(_coll.bounds.center, new Vector2(0.5f,0.5f), 0f, Vector2.down, 0.55f, groundLayer);
     }
     
     

@@ -7,6 +7,10 @@ TagManager:
   - Step
   - StepPlatform
   - DeadArea
+  - SmallSpring
+  - BigSpring
+  - SavePosition
+  - HugeSpring
   layers:
   - Default
   - TransparentFX
