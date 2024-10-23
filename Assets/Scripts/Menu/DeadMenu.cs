@@ -18,7 +18,8 @@ namespace CulTA
 
             player.transform.position = new Vector2(GameManager.instance.currentScenePlayerPosX,
                                                             GameManager.instance.currentScenePlayerPosY);
-            player.SetActive(true);
+            player.GetComponent<SpriteRenderer>().enabled = true;
+            player.GetComponent<PlayerMove>().enabled = true;
         }
     }
 }

@@ -10,12 +10,24 @@ namespace CulTA
     {
         public GameObject player;
         public GameObject deadPanel;
-        
+
+        public PlayerMove playerMove;
+
+
+        private void Awake()
+        {
+            playerMove = GetComponent<PlayerMove>();
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("DeadArea"))
             {
                 StartCoroutine(PlayerDeadWait());
+                
+                playerMove.enabled = false;
+                player.GetComponent<SpriteRenderer>().enabled = false;
+                player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             }
         }
 
@@ -26,8 +38,6 @@ namespace CulTA
             yield return new WaitForSeconds(2f);
             
             deadPanel.SetActive(true);
-                       
-            player.SetActive(false);
         }
     }
 }

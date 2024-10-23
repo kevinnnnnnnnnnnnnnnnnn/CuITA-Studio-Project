@@ -10,8 +10,8 @@ public class PlayerMove : MonoBehaviour
     
     private float dirX = 0;//水平方向移动
 
-    private bool isMoving;//是否在移动
-    private bool isJumping; //是否在跳跃
+    public bool isMoving;//是否在移动
+    public bool isJumping; //是否在跳跃
     
  
     [SerializeField] private float moveSpeed = 7f;//移动速度
@@ -19,11 +19,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;//判断是否可以跳跃的地面
 
     private float _originJumpForce;
-
-    void Start()
-    {
- 
-    }
 
 
     private void Awake()
@@ -113,7 +108,7 @@ public class PlayerMove : MonoBehaviour
     private bool IsGrounded()
     {
         //return Physics2D.Raycast(_coll.bounds.center, Vector2.down, 0.8f, groundLayer);     
-        return Physics2D.BoxCast(_coll.bounds.center, new Vector2(0.5f,0.5f), 0f, Vector2.down, 0.5f, groundLayer);
+        return Physics2D.BoxCast(_coll.bounds.center, new Vector2(0.5f,0.5f), 0f, Vector2.down, 0.6f, groundLayer);
     }
     
     

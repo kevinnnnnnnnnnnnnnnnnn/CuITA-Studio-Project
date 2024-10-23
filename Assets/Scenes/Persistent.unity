@@ -602,6 +602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1366c86074eeaa94fa43417ee3bd3153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
+  isJumping: 0
   moveSpeed: 7
   jumpForce: 12
   groundLayer:
@@ -652,6 +654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 152972055}
   deadPanel: {fileID: 1642251708}
+  playerMove: {fileID: 0}
 --- !u!1 &184188125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1067,7 @@ Camera:
   far clip plane: 1000
   field of view: 70
   orthographic: 1
-  orthographic size: 5.5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1089,7 +1092,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.6222224, y: 1.07999, z: -10}
+  m_LocalPosition: {x: -5.6110024, y: 1.07999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2373,7 +2376,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: baab781101f4baf40988d82af194fbcf, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -2797,7 +2800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4cd22862bc2e0478cf40b434d09738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLightStrength: 1
+  playerLightStrength: 1.5
   playerLight: {fileID: 736864489}
   playerFirstLight: 0.2
   playerMenuLight: 2

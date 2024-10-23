@@ -43887,7 +43887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_Name
-      value: LigthCollect4
+      value: LigthCollect6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45866,7 +45866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_Name
-      value: LigthCollect3
+      value: LigthCollect5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46056,7 +46056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_Name
-      value: LigthCollect5
+      value: LigthCollect7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -56776,7 +56776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_Name
-      value: LigthCollect2
+      value: LigthCollect4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

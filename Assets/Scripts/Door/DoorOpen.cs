@@ -94,8 +94,9 @@ public class DoorOpen : MonoBehaviour
                 transitionButton.SetActive(true);
                 
                 //当激活传送门光源时，将玩家光源的恢复到最初值
-                PlayerLightManager.instance.playerLight.GetComponent<Light2D>().intensity =
-                    PlayerLightManager.instance.playerFirstLight;
+                if(CollectLightManager.instance.currentCollectLightNum == CollectLightManager.instance.maxCollectLightNum)
+                    PlayerLightManager.instance.playerLight.GetComponent<Light2D>().intensity =
+                        PlayerLightManager.instance.playerFirstLight;
             }
         }
     }
