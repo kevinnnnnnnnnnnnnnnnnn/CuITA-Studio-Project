@@ -14,7 +14,7 @@ namespace CulTA
             _audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        public static void PlayOneShot(AudioClip clip, float volume = 1f)
+        public static void PlayOneShot(AudioClip clip, float volume = 0.3f)
         {
             if (!global) throw new InvalidOperationException();
             global._audioSource.PlayOneShot(clip, volume);

@@ -438,7 +438,7 @@ Transform:
   m_GameObject: {fileID: 152972055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.54, y: -3.71, z: 0}
+  m_LocalPosition: {x: -32, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -754,7 +754,7 @@ MonoBehaviour:
   currentScene: 
   currentPosX: 0
   currentPosY: 0
-  firstSceneName: GameScene4
+  firstSceneName: Menu
 --- !u!4 &362538104
 Transform:
   m_ObjectHideFlags: 0
@@ -925,7 +925,7 @@ Transform:
   m_GameObject: {fileID: 504970090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.54, y: -0.7100003, z: -10}
+  m_LocalPosition: {x: -32, y: 0.99999976, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1092,7 +1092,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.626472, y: 0.5, z: -10}
+  m_LocalPosition: {x: -5.6240845, y: 0.99999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1431,7 +1431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736864489}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.0057844897, w: 0.9999833}
+  m_LocalRotation: {x: -0, y: -0, z: -0.006159367, w: 0.99998105}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.72156584
-  m_PointLightOuterRadius: 4.7874393
+  m_PointLightOuterRadius: 7.132916
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2703,10 +2703,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 7, y: 10}
-      - {x: -15.4, y: 10}
-      - {x: -15.4, y: -5}
-      - {x: 7, y: -5}
+    - - {x: 8, y: 10}
+      - {x: -17, y: 10}
+      - {x: -17, y: -5}
+      - {x: 8, y: -5}
   m_UseDelaunayMesh: 0
 --- !u!114 &1645121944
 MonoBehaviour:
