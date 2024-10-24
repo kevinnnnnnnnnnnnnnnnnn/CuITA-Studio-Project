@@ -10,6 +10,8 @@ namespace CulTA
 {
     public class TimeLineManager : MonoBehaviour
     {
+        public static TimeLineManager instance;
+        
         [Header("场景TimeLine")] public PlayableDirector menuDirector;
         public PlayableDirector gameSceneDirector;
         public PlayableDirector gameScene1Director;
@@ -25,6 +27,12 @@ namespace CulTA
         public bool gameScene4TimeLineStart;
         
         public Button menuButton;
+
+
+        private void Awake()
+        {
+            instance = this;
+        }
 
 
         private void OnEnable()
@@ -66,7 +74,7 @@ namespace CulTA
                 TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
                 menuButton.interactable = false;
             }
-            if (currentSceneName == "GameScene" && !gameSceneTimeLineStart)
+            if (currentSceneName == "GameScene" && !gameSceneTimeLineStart && BackStoryManager.instance.isGameScene)
             {
                 gameSceneDirector.Play();
                 gameSceneTimeLineStart = true;
@@ -110,7 +118,5 @@ namespace CulTA
             TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = true;
             menuButton.interactable = true;
         }
-
-
     }
 }

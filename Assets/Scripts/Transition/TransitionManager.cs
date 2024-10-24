@@ -208,6 +208,16 @@ public class TransitionManager : MonoBehaviour,ISaveable
     {
         DoorOpenManager.instance.isOpenDoorDict.Clear();
         CollectLightManager.instance.isLightTokenDict.Clear();
+
+        //开始新游戏，初始化状态
+        //不需要初始化Menu的TimeLine
+        TimeLineManager.instance.gameSceneTimeLineStart = false;
+        TimeLineManager.instance.gameScene1TimeLineStart = false;
+        TimeLineManager.instance.gameScene2TimeLineStart = false;
+        TimeLineManager.instance.gameScene3TimeLineStart = false;
+        TimeLineManager.instance.gameScene4TimeLineStart = false;
+        
+        BackStoryManager.instance.isGameScene = false;
         
         canTransition = true;
         Transition("Menu",toScene, -10, -2);

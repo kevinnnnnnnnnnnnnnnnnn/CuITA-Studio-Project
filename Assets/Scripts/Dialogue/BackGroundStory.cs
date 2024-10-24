@@ -6,8 +6,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogSystem : MonoBehaviour
+public class BackGroundStory : MonoBehaviour
 {
+    public static BackGroundStory instance;
+    
     [Header("UI组件")]
     public TextMeshProUGUI textLable;
     //public Image faceImage;
@@ -15,10 +17,7 @@ public class DialogSystem : MonoBehaviour
     [Header("文本文件")]
     public TextAsset textFile;
     public int index;
-
-    [Header("人物头像")]
-    //public Sprite face01;
-    //public Sprite face02;
+    
 
     
     [Header("文本播放相关")]
@@ -28,9 +27,13 @@ public class DialogSystem : MonoBehaviour
     [SerializeField]bool textFinished;//本行文本是否结束
     [SerializeField]bool cancelTyping;//是否取消输入文本
 
+    public bool isStoryOver;
+
 
     private void Awake()
     {
+        instance = this;
+        
         GetTextFromFile(textFile);       
     }
 
@@ -43,8 +46,13 @@ public class DialogSystem : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(BackStoryManager.instance.isGameScene)
+            gameObject.SetActive(false);
+        
+        if(Input.GetMouseButtonDown(0) && index == textList.Count)
         {
+            isStoryOver = true;
+            
             TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = true;
             TimeLineManager.instance.menuButton.gameObject.SetActive(true);
             
@@ -53,18 +61,10 @@ public class DialogSystem : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.E) && index == textList.Count)
+        if(Input.GetMouseButtonDown(0))
         {
-            TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = true;
-            TimeLineManager.instance.menuButton.gameObject.SetActive(true);
+            isStoryOver = false;
             
-            gameObject.SetActive(false);
-            index = 0;
-            return;
-        }
-
-        if(Input.GetKeyDown(KeyCode.E))
-        {
             if(textFinished && !cancelTyping)
             {
                 StartCoroutine(SetTextUI());
@@ -106,21 +106,8 @@ public class DialogSystem : MonoBehaviour
         TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
         TransitionManager.instance.player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         
-        
         textFinished = false;
         textLable.text = "";
-
-        switch(textList[index])
-        {
-            case "A\r":
-                //faceImage.sprite = face01;
-                index++;
-                break;
-            case "B\r":
-                //faceImage.sprite = face02;
-                index++;
-                break;
-        }
 
         int letter = 0;//当前行文本中已显示的文字个数
         
@@ -139,3 +126,4 @@ public class DialogSystem : MonoBehaviour
     }
 
 }
+

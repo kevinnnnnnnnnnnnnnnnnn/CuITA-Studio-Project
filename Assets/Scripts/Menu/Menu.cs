@@ -10,8 +10,6 @@ using UnityEditor;
 
 public class Menu : MonoBehaviour
 {
-    //TODO：挂在Menu的Canvas上，将Canvas挂在Button事件中，实现Menu进入游戏，退出游戏等功能
-
     private string toScene;
     private float targetX;
     private float targetY;

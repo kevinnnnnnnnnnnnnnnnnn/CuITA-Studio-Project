@@ -63,3 +63,6 @@ TagManager:
   - name: Details
     uniqueID: 1051072599
     locked: 0
+  - name: BackGroundStory
+    uniqueID: 1207852871
+    locked: 0
