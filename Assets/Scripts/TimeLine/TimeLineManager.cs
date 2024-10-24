@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace CulTA
 {
@@ -22,6 +23,8 @@ namespace CulTA
         public bool gameScene2TimeLineStart;
         public bool gameScene3TimeLineStart;
         public bool gameScene4TimeLineStart;
+        
+        public Button menuButton;
 
 
         private void OnEnable()
@@ -56,41 +59,47 @@ namespace CulTA
         {
             var currentSceneName = SceneManager.GetActiveScene().name;
 
-            if (currentSceneName == "Menu" && !menuTimeLineStart)
+            if (currentSceneName == "Persistent" && !menuTimeLineStart)
             {
                 menuDirector.Play();
                 menuTimeLineStart = true;
                 TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
+                menuButton.interactable = false;
             }
             if (currentSceneName == "GameScene" && !gameSceneTimeLineStart)
             {
                 gameSceneDirector.Play();
                 gameSceneTimeLineStart = true;
                 TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
+                menuButton.interactable = false;
             }
             if (currentSceneName == "GameScene1" && !gameScene1TimeLineStart)
             {
                 gameScene1Director.Play();
                 gameScene1TimeLineStart = true;
                 TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
+                menuButton.interactable = false;
             }
             if (currentSceneName == "GameScene2" && !gameScene2TimeLineStart)
             {
                 gameScene2Director.Play();
                 gameScene2TimeLineStart = true;
                 TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
+                menuButton.interactable = false;
             }
             if (currentSceneName == "GameScene3" && !gameScene3TimeLineStart)
             {
                 gameScene3Director.Play();
                 gameScene3TimeLineStart = true;
                 TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
+                menuButton.interactable = false;
             }
             if (currentSceneName == "GameScene4" && !gameScene4TimeLineStart)
             {
                 gameScene4Director.Play();
                 gameScene4TimeLineStart = true;
                 TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
+                menuButton.interactable = false;
             }
         }
 
@@ -99,6 +108,7 @@ namespace CulTA
         public void OnSetPlayerMove(PlayableDirector director)
         {
             TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = true;
+            menuButton.interactable = true;
         }
 
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using CulTA;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,10 +38,7 @@ public class Menu : MonoBehaviour
 
     public void StartNewGame(string to)
     {
-        Debug.Log("Start New Game");
-        EventHandler.CallMenuStartNewGameEvent(to);
-
-        GameManager.instance.isGameStart = true;
+        StartCoroutine(StarNewGame(to));
     }
 
     public void ContinueGame()
@@ -79,4 +77,16 @@ public class Menu : MonoBehaviour
         targetY = TransitionManager.instance.currentPosY;
     }
 
+
+    IEnumerator StarNewGame(string to)
+    {
+        MenuGlobalLight.instance.SetMenuLightIntensity();
+        
+        yield return new WaitForSeconds(2f);
+        
+        Debug.Log("Start New Game");
+        EventHandler.CallMenuStartNewGameEvent(to);
+
+        GameManager.instance.isGameStart = true;
+    }
 }

@@ -49026,7 +49026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4597415226115561339, guid: 1ddbb7578c9c3824ebe6ab57757ac0ef, type: 3}
       propertyPath: m_Name
-      value: DoorOpen2
+      value: DoorOpen1
       objectReference: {fileID: 0}
     - target: {fileID: 6769455728079686141, guid: 1ddbb7578c9c3824ebe6ab57757ac0ef, type: 3}
       propertyPath: simulationSpeed

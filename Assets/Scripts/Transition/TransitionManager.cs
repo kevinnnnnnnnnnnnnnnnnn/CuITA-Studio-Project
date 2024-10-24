@@ -193,8 +193,10 @@ public class TransitionManager : MonoBehaviour,ISaveable
         fadePanel.gameObject.SetActive(false);
         
         player.transform.position = new Vector3(targetX, targetY + 1f, player.transform.position.z);
-        SpriteRenderer spr = player.GetComponent<SpriteRenderer>();
-        spr.flipX = !spr.flipX;
+        // SpriteRenderer spr = player.GetComponent<SpriteRenderer>();
+        // spr.flipX = !spr.flipX;
+        
+        MenuGlobalLight.instance.globalLight.intensity = 0.2f;
     }
 
 

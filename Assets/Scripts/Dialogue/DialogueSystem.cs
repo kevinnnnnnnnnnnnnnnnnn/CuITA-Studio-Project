@@ -44,19 +44,23 @@ public class DialogSystem : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
+            TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = true;
+            
             gameObject.SetActive(false);
             index = 0;
             return;
         }
 
-        if((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space)) && index == textList.Count)
+        if(Input.GetKeyDown(KeyCode.E) && index == textList.Count)
         {
+            TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = true;
+            
             gameObject.SetActive(false);
             index = 0;
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.E))
         {
             if(textFinished && !cancelTyping)
             {
@@ -96,6 +100,8 @@ public class DialogSystem : MonoBehaviour
     /// <returns></returns>
     IEnumerator SetTextUI()
     {
+        TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
+        
         textFinished = false;
         textLable.text = "";
 

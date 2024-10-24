@@ -1140,7 +1140,7 @@ Camera:
   far clip plane: 1000
   field of view: 70
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1363,6 +1363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619394802}
   - component: {fileID: 619394803}
+  - component: {fileID: 619394804}
   m_Layer: 0
   m_Name: Global Light 2D
   m_TagString: Untagged
@@ -1401,7 +1402,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.55345905, g: 0.55345905, b: 0.55345905, a: 1}
+  m_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
   m_Intensity: 0.2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -1435,6 +1436,21 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &619394804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619394800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ca01262733de6428c6330e3d3db534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalLight: {fileID: 619394803}
+  lightIntensity: 50
+  lightDuration: 1.5
 --- !u!1 &663244825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1873,7 @@ MonoBehaviour:
   gameScene2TimeLineStart: 0
   gameScene3TimeLineStart: 0
   gameScene4TimeLineStart: 0
+  menuButton: {fileID: 1933488635}
 --- !u!4 &1017157450
 Transform:
   m_ObjectHideFlags: 0
@@ -2712,7 +2729,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: baab781101f4baf40988d82af194fbcf, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -3472,6 +3489,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6299595170691619647, guid: 9d5d69fca4135504694b03096d285006, type: 3}
   m_PrefabInstance: {fileID: 3776737171621210648}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1933488635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6656607981261622729, guid: 9d5d69fca4135504694b03096d285006, type: 3}
+  m_PrefabInstance: {fileID: 3776737171621210648}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933488633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1964072502
 GameObject:
   m_ObjectHideFlags: 3
