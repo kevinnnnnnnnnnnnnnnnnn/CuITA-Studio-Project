@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_Name
-      value: LightCollect9
+      value: LightCollect11
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_IsActive
@@ -9874,7 +9874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_Name
-      value: LightCollect8
+      value: LightCollect10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

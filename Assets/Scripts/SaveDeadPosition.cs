@@ -42,7 +42,7 @@ namespace CulTA
             if (canSave && Input.GetKeyDown(KeyCode.E))
             {
                 GameManager.instance.currentScenePlayerPosX = TransitionManager.instance.player.transform.position.x;
-                GameManager.instance.currentScenePlayerPosY = TransitionManager.instance.player.transform.position.y;                
+                GameManager.instance.currentScenePlayerPosY = TransitionManager.instance.player.transform.position.y;
             }
 
         }

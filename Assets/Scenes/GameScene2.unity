@@ -45866,7 +45866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_Name
-      value: LigthCollect5
+      value: LigthCollect9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -56776,7 +56776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627671468127046368, guid: b66336d0891656e4288b310f13d6d897, type: 3}
       propertyPath: m_Name
-      value: LigthCollect4
+      value: LigthCollect8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -56906,10 +56906,10 @@ SceneRoots:
   m_Roots:
   - {fileID: 1109546632}
   - {fileID: 8375743745878696234}
-  - {fileID: 7601242935211063944}
-  - {fileID: 988958192}
   - {fileID: 45239263}
   - {fileID: 1061774530}
+  - {fileID: 7601242935211063944}
+  - {fileID: 988958192}
   - {fileID: 518714289}
   - {fileID: 78816590}
   - {fileID: 1180912685}

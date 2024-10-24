@@ -14,12 +14,14 @@ namespace CulTA
         public PlayableDirector gameScene1Director;
         public PlayableDirector gameScene2Director;
         public PlayableDirector gameScene3Director;
+        public PlayableDirector gameScene4Director;
 
         [Header("TimeLine是否已启动")] public bool menuTimeLineStart;
         public bool gameSceneTimeLineStart;
         public bool gameScene1TimeLineStart;
         public bool gameScene2TimeLineStart;
         public bool gameScene3TimeLineStart;
+        public bool gameScene4TimeLineStart;
 
 
         private void OnEnable()
@@ -29,6 +31,7 @@ namespace CulTA
             gameScene1Director.stopped += OnSetPlayerMove;
             gameScene2Director.stopped += OnSetPlayerMove;
             gameScene3Director.stopped += OnSetPlayerMove;
+            gameScene4Director.stopped += OnSetPlayerMove;
         }
 
         
@@ -39,6 +42,7 @@ namespace CulTA
             gameScene1Director.stopped -= OnSetPlayerMove;
             gameScene2Director.stopped -= OnSetPlayerMove;
             gameScene3Director.stopped -= OnSetPlayerMove;
+            gameScene4Director.stopped -= OnSetPlayerMove;
         }
 
 
@@ -80,6 +84,12 @@ namespace CulTA
             {
                 gameScene3Director.Play();
                 gameScene3TimeLineStart = true;
+                TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
+            }
+            if (currentSceneName == "GameScene4" && !gameScene4TimeLineStart)
+            {
+                gameScene4Director.Play();
+                gameScene4TimeLineStart = true;
                 TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = false;
             }
         }

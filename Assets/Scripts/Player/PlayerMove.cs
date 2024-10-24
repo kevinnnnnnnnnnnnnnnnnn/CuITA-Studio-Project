@@ -69,7 +69,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (other.CompareTag("BigSpring"))
         {
-            _rb.AddForce(new Vector2(0, 50),ForceMode2D.Impulse);
+            _rb.AddForce(new Vector2(0, 45),ForceMode2D.Impulse);
         }
         if (other.CompareTag("SmallSpring"))
         {
