@@ -2501,7 +2501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLable: {fileID: 935727167}
-  textFile: {fileID: 4900000, guid: 3ae5ad222dbbbd041b8c0fea95247288, type: 3}
+  textFile: {fileID: 4900000, guid: ae2621bff953f5e4caf089451592e378, type: 3}
   index: 0
   textSpeed: 0.1
   textFinished: 0
