@@ -60,7 +60,8 @@ public class DoorOpen : MonoBehaviour
     /// </summary>
     public void OpenDoor()
     {
-        if (CollectLightManager.instance.currentCollectLightNum == CollectLightManager.instance.maxCollectLightNum)
+        if (CollectLightManager.instance.currentCollectLightNum == CollectLightManager.instance.maxCollectLightNum 
+                    && CollectLightManager.instance.maxCollectLightNum != 0)
         {
             OpenDirectly();
 
