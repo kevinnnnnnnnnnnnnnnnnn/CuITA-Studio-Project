@@ -110,8 +110,13 @@ public class DialogSystem : MonoBehaviour
         textFinished = false;
         textLable.text = "";
         
-
         int letter = 0;//当前行文本中已显示的文字个数
+
+        if (textList[index][letter] == ' ')
+        {
+            textLable.text += GameManager.instance.playerName;
+            letter++;   
+        }
         
         //使当前行文本逐字输出
         while(!cancelTyping && letter < textList[index].Length - 1)
@@ -120,8 +125,14 @@ public class DialogSystem : MonoBehaviour
             letter++;
             yield return new WaitForSeconds(textSpeed);
         }
-        textLable.text = textList[index];//cancelTyping为true不进入循环，取消逐字输出，直接输出全部文字
         
+        //含空格则输出PlayerName,无空格则为NPC名字
+        if(textList[index][0] == ' ')
+            textLable.text = GameManager.instance.playerName + textList[index];//取消逐字输出，直接输出全部文字
+        else
+            textLable.text = textList[index];
+            
+       
         cancelTyping = false;
         textFinished = true;
         index++;

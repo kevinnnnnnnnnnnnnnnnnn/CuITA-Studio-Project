@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
@@ -27,17 +28,23 @@ namespace CulTA
         public bool gameScene4TimeLineStart;
         
         public Button menuButton;
+        
+
+        public GameObject inputPanel;
 
 
         private void Awake()
         {
             instance = this;
         }
-
+        
+        
 
         private void OnEnable()
         {
             menuDirector.stopped += OnSetPlayerMove;
+            menuDirector.stopped += OnActiveInputPanel;
+            
             gameSceneDirector.stopped += OnSetPlayerMove;
             gameScene1Director.stopped += OnSetPlayerMove;
             gameScene2Director.stopped += OnSetPlayerMove;
@@ -49,6 +56,8 @@ namespace CulTA
         private void OnDisable()
         {
             menuDirector.stopped -= OnSetPlayerMove;
+            menuDirector.stopped -= OnActiveInputPanel;
+            
             gameSceneDirector.stopped -= OnSetPlayerMove;
             gameScene1Director.stopped -= OnSetPlayerMove;
             gameScene2Director.stopped -= OnSetPlayerMove;
@@ -117,6 +126,11 @@ namespace CulTA
         {
             TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = true;
             menuButton.interactable = true;
+        }
+
+        public void OnActiveInputPanel(PlayableDirector director)
+        {
+            inputPanel.SetActive(true);
         }
     }
 }

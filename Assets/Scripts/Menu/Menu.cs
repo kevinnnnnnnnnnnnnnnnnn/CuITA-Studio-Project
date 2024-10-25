@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using CulTA;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,6 +17,10 @@ public class Menu : MonoBehaviour
     private float targetY;
 
     public Button continueButton;
+
+    public Button exitButton;
+
+
 
     private void Update()
     {
@@ -80,7 +86,13 @@ public class Menu : MonoBehaviour
     {
         MenuGlobalLight.instance.SetMenuLightIntensity();
         
+        if(exitButton != null)
+            exitButton.interactable = false;
+        
         yield return new WaitForSeconds(2f);
+        
+        if(exitButton != null)
+            exitButton.interactable = true;
         
         Debug.Log("Start New Game");
         EventHandler.CallMenuStartNewGameEvent(to);
