@@ -10,12 +10,14 @@ public class TalkButton : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        button.SetActive(true);
+        if(other.CompareTag("Player"))
+            button.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        button.SetActive(false);
+        if(other.CompareTag("Player"))
+            button.SetActive(false);
     }
 
     private void Update()

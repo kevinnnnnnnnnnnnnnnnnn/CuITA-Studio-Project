@@ -443,7 +443,7 @@ Transform:
   m_GameObject: {fileID: 152972055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.83, y: 0.21, z: 0}
+  m_LocalPosition: {x: 115.24, y: -0.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -832,7 +832,7 @@ MonoBehaviour:
   currentScene: 
   currentPosX: 0
   currentPosY: 0
-  firstSceneName: Menu
+  firstSceneName: GameScene1
 --- !u!4 &362538104
 Transform:
   m_ObjectHideFlags: 0
@@ -1395,7 +1395,7 @@ Transform:
   m_GameObject: {fileID: 504970090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.83, y: 3.2099998, z: -10}
+  m_LocalPosition: {x: 115.24, y: 2.1399999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1562,7 +1562,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.2163315, y: 3.20999, z: -10}
+  m_LocalPosition: {x: -1.7860489, y: 2.1399899, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1873,15 +1873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameScene: 0
-  isGameScene1: 0
-  isGameScene2: 0
-  isGameScene3: 0
-  isGameScene4: 0
   gameSceneStory: {fileID: 1885009261}
-  gameScene1Story: {fileID: 1643955346}
-  gameScene2Story: {fileID: 438556926}
-  gameScene3Story: {fileID: 533494715}
-  gameScene4Story: {fileID: 712964168}
 --- !u!1 &614190847
 GameObject:
   m_ObjectHideFlags: 0

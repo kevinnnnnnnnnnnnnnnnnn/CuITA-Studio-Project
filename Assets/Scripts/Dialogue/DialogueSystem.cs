@@ -109,18 +109,7 @@ public class DialogSystem : MonoBehaviour
         
         textFinished = false;
         textLable.text = "";
-
-        switch(textList[index])
-        {
-            case "A\r":
-                //faceImage.sprite = face01;
-                index++;
-                break;
-            case "B\r":
-                //faceImage.sprite = face02;
-                index++;
-                break;
-        }
+        
 
         int letter = 0;//当前行文本中已显示的文字个数
         

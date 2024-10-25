@@ -2496,12 +2496,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon_tiles_113
+      name: _NPC1
       rect:
         serializedVersion: 2
-        x: 200
+        x: 196
         y: 204
-        width: 20
+        width: 17
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2517,12 +2517,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dungeon_tiles_114
+      name: _NPC2
       rect:
         serializedVersion: 2
-        x: 220
+        x: 217
         y: 204
-        width: 20
+        width: 17
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -4174,6 +4174,8 @@ TextureImporter:
       BackGround_7: 1445922986
       BackGround_8: 1278955050
       BackGround_9: 1610773875
+      _NPC1: 1105072287
+      _NPC2: 1523272266
       dungeon_tiles_0: -308932612
       dungeon_tiles_1: -1367980302
       dungeon_tiles_10: -456158116
@@ -4191,8 +4193,6 @@ TextureImporter:
       dungeon_tiles_110: -2028335209
       dungeon_tiles_111: -1419220217
       dungeon_tiles_112: -1489014891
-      dungeon_tiles_113: 1105072287
-      dungeon_tiles_114: 1523272266
       dungeon_tiles_115: 1372790922
       dungeon_tiles_116: 45557825
       dungeon_tiles_117: 143180932
