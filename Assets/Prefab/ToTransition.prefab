@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1014043437887373294}
   - component: {fileID: 4265771788495944439}
   - component: {fileID: 8812387181584147901}
-  - component: {fileID: 8280803634817543241}
+  - component: {fileID: 4063752050884303771}
   m_Layer: 0
   m_Name: ToTransition
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.33, y: -1.8, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 1051072599
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 84cf80dbb90b186429c092ed8a09fbe9, type: 3}
-  m_Color: {r: 1, g: 0.5058824, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5632e9dc79f28c14e84e6558d71c40c6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetDoorPos: {fileID: 0}
---- !u!70 &8280803634817543241
-CapsuleCollider2D:
+--- !u!60 &4063752050884303771
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,6 +131,22 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000009536743, y: 0.00000011920929}
-  m_Size: {x: 0.8420582, y: 1.9769275}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.375, y: 1.3125}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.375, y: 0.65625}
+      - {x: -0.6875, y: 0.34375}
+      - {x: -0.6875, y: -0.28125}
+      - {x: -0.0625, y: -0.65625}
+      - {x: 0.6875, y: -0.65625}
+      - {x: 0.6875, y: 0.65625}
+  m_UseDelaunayMesh: 0

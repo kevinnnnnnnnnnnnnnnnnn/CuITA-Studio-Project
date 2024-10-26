@@ -36,7 +36,7 @@ public class DialogSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        textFinished = true;
+        textFinished = true;             
         StartCoroutine(SetTextUI());
     }
 
@@ -115,7 +115,7 @@ public class DialogSystem : MonoBehaviour
         if (textList[index][letter] == ' ')
         {
             textLable.text += GameManager.instance.playerName;
-            letter++;   
+            letter++;
         }
         
         //使当前行文本逐字输出
