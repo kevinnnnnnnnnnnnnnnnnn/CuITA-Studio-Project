@@ -8,10 +8,15 @@ namespace CulTA
     public class Teach : MonoBehaviour
     {
         public GameObject teachPanel;
-        
+
+        private void Start()
+        {
+            teachPanel.SetActive(false);
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.CompareTag("Player"))
+            if (other.CompareTag("Player"))
                 teachPanel.SetActive(true);
         }
 
