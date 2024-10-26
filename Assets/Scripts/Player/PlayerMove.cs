@@ -98,10 +98,10 @@ public class PlayerMove : MonoBehaviour
 
         /////////////////////////////////////////////////////////////////////////////////
         //跳跃
-        if (Input.GetButton("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             var sample = GameApplication.BuiltInResources.GetSampleByName("jump");
-            MonoAudioPlayer.PlayOneShot(sample);
+            MonoAudioPlayer.PlayOneShot(sample, 0.5f);
 
             isJumping = true;
             _rb.velocity = new Vector3(_rb.velocity.x, jumpForce, 0);
