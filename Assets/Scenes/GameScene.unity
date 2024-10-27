@@ -3513,13 +3513,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeachStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2793352772687568166, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 171.1337
+      value: 108.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.22892
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.22892
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.22892
       objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.194
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3577,9 +3597,13 @@ PrefabInstance:
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6403656089872192930, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_text
-      value: "\u6309\u4E0BW\u5F00\u59CB\u722C\u68AF\u5B50\uFF0C\u6500\u722C\u65F6\u6309S\u53D6\u6D88\u6500\u722C"
+      value: "\u4E0A\u5212\u6447\u6746\u6500\u722C\u68AF\u5B50\uFF0C\u6500\u722C\u65F6\u4E0B\u5212\u6447\u6746\u53EF\u53D6\u6D88\u6500\u722C"
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_fontSize
@@ -3588,6 +3612,10 @@ PrefabInstance:
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_fontSizeBase
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11284,33 +11312,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeachMove
       objectReference: {fileID: 0}
+    - target: {fileID: 2793352772687568166, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 196.0559
+      value: 184.42
       objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 81.9157
+      value: 159.07
       objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.02
+      value: 0.7977393
       objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.02
+      value: 0.7977393
       objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.02
+      value: 0.7977393
       objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.0819
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.634
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3112844171126202408, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11352,6 +11384,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6152926979761368315, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6397035547610269080, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: exitButton
       value: 
@@ -11360,13 +11396,17 @@ PrefabInstance:
       propertyPath: continueButton
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6403656089872192930, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_text
-      value: "\u6309\u4E0BA\u3001D\u63A7\u5236\u79FB\u52A8\uFF0C\u7A7A\u683C\u4E3A\u8DF3\u8DC3\uFF0C\u6536\u96C6\u5149\u7403\u53BB\u6253\u5F00\u4F20\u9001\u95E8\u5427\uFF0C\u6CE8\u610F\u6389\u5165\u6C34\u91CC\u4F1A\u6B7B\u4EA1\u54E6"
+      value: "\u6447\u6746\u63A7\u5236\u79FB\u52A8\uFF0CX\u4E3A\u8DF3\u8DC3\uFF0C\u6536\u96C6\u5149\u7403\u53BB\u6253\u5F00\u4F20\u9001\u95E8\u5427\uFF0C\u6CE8\u610F\u6389\u5165\u6C34\u91CC\u4F1A\u6B7B\u4EA1\u54E6"
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_fontSize
-      value: 18.6
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_fontStyle
@@ -11386,11 +11426,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_fontSizeBase
-      value: 18.6
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665725867104493150, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.023175387
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665725867104493150, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.01209242
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665725867104493150, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1237
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

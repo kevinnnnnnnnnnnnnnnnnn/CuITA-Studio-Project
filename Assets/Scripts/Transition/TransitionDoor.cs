@@ -14,7 +14,7 @@ namespace CulTA
             if (other.CompareTag("Player"))
             {
                 TransitionManager.instance.player.transform.position =
-                    targetDoorPos.transform.position + Vector3.right * 1.5f;
+                    targetDoorPos.transform.position + Vector3.right * 2.5f;
             }
         }
     }

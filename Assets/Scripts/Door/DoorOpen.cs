@@ -4,9 +4,11 @@ using UnityEngine.Rendering.Universal;
 
 public class DoorOpen : MonoBehaviour
 {
+    public static DoorOpen instance;
+    
     [SerializeField] private GameObject door;
     [SerializeField] private GameObject doorLight;
-    [SerializeField] private GameObject transitionButton;
+    [SerializeField] public GameObject transitionButton;
     
     private Coroutine _openDoorLightCoroutine;
 
@@ -21,6 +23,8 @@ public class DoorOpen : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        instance = this;
+        
         door.SetActive(false);
         doorLight.SetActive(false);
         doorLight.GetComponent<Light2D>().intensity = 0;

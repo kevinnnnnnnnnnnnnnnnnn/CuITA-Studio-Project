@@ -8,6 +8,8 @@ public class PlayerUpStep : MonoBehaviour
 {
     private Animator _anim;
     private Rigidbody2D _rb;
+
+    public Joystick joystick;
     
     [Header("组件")]
     [SerializeField] private PlayerMove playerMove; 
@@ -95,7 +97,7 @@ public class PlayerUpStep : MonoBehaviour
     private void UpStepStop()
     {
         //按w进入攀爬悬停状态
-        if (canUpStep && Input.GetKeyDown(KeyCode.W))
+        if (canUpStep && (Input.GetKeyDown(KeyCode.W) || joystick.Vertical > .3f))
         {
             //未攀爬时按下w换为攀爬状态
             isUpStepStop = true;
@@ -112,7 +114,7 @@ public class PlayerUpStep : MonoBehaviour
             OpenAndColseMove();
         }
         //按s取消攀爬悬停状态
-        else if (canUpStep && Input.GetKeyDown(KeyCode.S))
+        else if (canUpStep && (Input.GetKeyDown(KeyCode.S) || joystick.Vertical < -.3f))
         {
             isUpStepStop = false;   
             _anim.SetBool($"isUpStepStop", isUpStepStop);
@@ -131,7 +133,7 @@ public class PlayerUpStep : MonoBehaviour
     public void UpStep()
     {
         //持续按下w时，判断为正在爬梯子
-        if (isUpStepStop && Input.GetKey(KeyCode.W))
+        if (isUpStepStop && (Input.GetKey(KeyCode.W) || joystick.Vertical > .3f))
         {
             isUpStep = true;
         }

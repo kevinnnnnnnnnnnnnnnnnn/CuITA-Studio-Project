@@ -45016,6 +45016,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.25508
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25508
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.25508
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862594001060728579, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3112844171126202408, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.72
@@ -56036,7 +56056,7 @@ CompositeCollider2D:
   m_Offset: {x: 0, y: -0.1}
   m_GeometryType: 0
   m_GenerationType: 0
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.02
   m_ColliderPaths:
   - m_Collider: {fileID: 1727849403}
     m_ColliderPaths:

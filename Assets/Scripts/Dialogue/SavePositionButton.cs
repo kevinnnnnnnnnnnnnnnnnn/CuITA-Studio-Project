@@ -1,22 +1,22 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class TalkButton : MonoBehaviour
+public class SavepositionButton : MonoBehaviour
 {
-    public static TalkButton instance;
+    public static SavepositionButton instance;
     
     public GameObject button;
     public GameObject talkUI;
 
-
+    
     private void Awake()
     {
         instance = this;
     }
-
+    
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
@@ -41,18 +41,9 @@ public class TalkButton : MonoBehaviour
         //     if(button.activeSelf == false)
         //         AndroidInputButton.instance.isClickedInteractiveButton = false;    
         // }
-
-        if (SavepositionButton.instance != null)
-        {
-            if(button.activeSelf == false && SavepositionButton.instance.button.activeSelf == false && DoorOpen.instance.transitionButton.activeSelf == false)
-                AndroidInputButton.instance.isClickedInteractiveButton = false;               
-        }
-        else
-        {
-            if(button.activeSelf == false && DoorOpen.instance.transitionButton.activeSelf == false)
-                AndroidInputButton.instance.isClickedInteractiveButton = false;       
-        }
-
+        
+        if(button.activeSelf == false && TalkButton.instance.button.activeSelf == false && DoorOpen.instance.transitionButton.activeSelf == false)
+            AndroidInputButton.instance.isClickedInteractiveButton = false;   
 
             
         if (button.activeSelf && (Input.GetKeyDown(KeyCode.E) || AndroidInputButton.instance.isClickedInteractiveButton))

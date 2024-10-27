@@ -39,7 +39,7 @@ namespace CulTA
 
         public void SavePosition()
         {
-            if (canSave && Input.GetKeyDown(KeyCode.E))
+            if (canSave && (Input.GetKeyDown(KeyCode.E) || AndroidInputButton.instance.isClickedInteractiveButton))
             {
                 GameManager.instance.currentScenePlayerPosX = TransitionManager.instance.player.transform.position.x;
                 GameManager.instance.currentScenePlayerPosY = TransitionManager.instance.player.transform.position.y;
