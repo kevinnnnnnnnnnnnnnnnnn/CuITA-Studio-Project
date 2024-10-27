@@ -16,4 +16,6 @@ MonoBehaviour:
   - key: pickupCoin
     sample: {fileID: 8300000, guid: 6a565429c9c50524193413d856fa6b27, type: 3}
   - key: jump
-    sample: {fileID: 8300000, guid: 470abd527a45faf4c8669d3e147eb3c0, type: 3}
+    sample: {fileID: 8300000, guid: c2be4d8c9c60aaa4c9cc39f310e711e4, type: 3}
+  - key: death
+    sample: {fileID: 8300000, guid: b9b960644b083134ca44b8ec547d8905, type: 3}

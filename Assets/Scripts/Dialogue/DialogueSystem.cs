@@ -10,42 +10,40 @@ public class DialogSystem : MonoBehaviour
 {
     [Header("UI组件")]
     public TextMeshProUGUI textLable;
-    //public Image faceImage;
-
+    
     [Header("文本文件")]
     public TextAsset textFile;
     public int index;
-
-    [Header("人物头像")]
-    //public Sprite face01;
-    //public Sprite face02;
-
+    
     
     [Header("文本播放相关")]
     List<string>textList = new List<string>();
     public float textSpeed;
-
+    
+    
     [SerializeField]bool textFinished;//本行文本是否结束
     [SerializeField]bool cancelTyping;//是否取消输入文本
     
+    
     public bool isInOverGameNPC;
-
+    
     public Button leaveDreamButton;
     public Button exitDreamButton;
-
-
+    
+    
     private void Awake()
     {
         GetTextFromFile(textFile);       
     }
-
+    
+    
     private void OnEnable()
     {
         textFinished = true;             
         StartCoroutine(SetTextUI());
     }
-
-
+    
+    
     private void Update()
     {
         if (isInOverGameNPC && index >= textList.Count)
@@ -66,9 +64,11 @@ public class DialogSystem : MonoBehaviour
             index = 0;
             return;
         }
-
-        if(Input.GetKeyDown(KeyCode.E) && index == textList.Count)
+        
+        if((Input.GetKeyDown(KeyCode.E) || AndroidInputButton.instance.isClickedInteractiveButton) && index == textList.Count)
         {
+            AndroidInputButton.instance.isClickedInteractiveButton = false;
+            
             TransitionManager.instance.player.GetComponent<PlayerMove>().enabled = true;
             TimeLineManager.instance.menuButton.gameObject.SetActive(true);
             
@@ -76,9 +76,11 @@ public class DialogSystem : MonoBehaviour
             index = 0;
             return;
         }
-
-        if(Input.GetKeyDown(KeyCode.E))
+        
+        if(Input.GetKeyDown(KeyCode.E) || AndroidInputButton.instance.isClickedInteractiveButton)
         {
+            AndroidInputButton.instance.isClickedInteractiveButton = false;
+            
             if(textFinished && !cancelTyping)
             {
                 StartCoroutine(SetTextUI());
@@ -89,10 +91,8 @@ public class DialogSystem : MonoBehaviour
             }
         }
     }
-
-
-
-
+    
+    
     /// <summary>
     /// 将textFile的文本分行切割到textList中
     /// </summary>
@@ -109,8 +109,8 @@ public class DialogSystem : MonoBehaviour
             textList.Add(line);
         }
     }
-
-
+    
+    
     /// <summary>
     /// 逐行逐字输出文本
     /// </summary>
@@ -146,7 +146,7 @@ public class DialogSystem : MonoBehaviour
         //含空格则输出PlayerName,无空格则为NPC名字
         if (textList[index][0] == ' ')
         {
-            while (letter < textList[index].Length - 1)
+            while (letter < textList[index].Length)
             {
                 if (textList[index][letter] == ' ')
                 {
@@ -162,8 +162,7 @@ public class DialogSystem : MonoBehaviour
         }
         else
             textLable.text = textList[index];
-            
-       
+        
         cancelTyping = false;
         textFinished = true;
         index++;

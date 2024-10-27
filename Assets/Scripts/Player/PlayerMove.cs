@@ -1,7 +1,14 @@
 using System;
+using Codice.Client.ChangeTrackerService;
 using CulTA;
 using UnityEditor;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor.Callbacks;
+using UnityEngine.EventSystems;
+
+
 
 public class PlayerMove : MonoBehaviour
 {
@@ -9,6 +16,9 @@ public class PlayerMove : MonoBehaviour
     private BoxCollider2D _coll;
     private SpriteRenderer _spr;
     private Animator _anim;
+
+    public Joystick joystick;
+
     
     private float dirX = 0;//水平方向移动
 
@@ -25,6 +35,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
+        
+        
         _rb = GetComponent<Rigidbody2D>();
         _coll = GetComponent<BoxCollider2D>();
         _spr = GetComponent<SpriteRenderer>();
@@ -38,6 +50,9 @@ public class PlayerMove : MonoBehaviour
     {
         Move();
         ChangeAnim();
+        
+        if(!IsGrounded())
+            AndroidInputButton.instance.isClickedJumpButton = false;
     }
 
 
@@ -80,8 +95,18 @@ public class PlayerMove : MonoBehaviour
             _rb.AddForce(new Vector2(0, 75),ForceMode2D.Impulse);
         }
     }
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /// <summary>
     /// 角色移动和跳跃
     /// </summary>
@@ -89,6 +114,8 @@ public class PlayerMove : MonoBehaviour
     {
         //移动
         dirX = Input.GetAxisRaw("Horizontal");
+        dirX = joystick.Horizontal;
+        
         _rb.velocity = new Vector2(dirX * moveSpeed, _rb.velocity.y);
         
         if(dirX != 0 && !isJumping)
@@ -98,8 +125,8 @@ public class PlayerMove : MonoBehaviour
 
         /////////////////////////////////////////////////////////////////////////////////
         //跳跃
-        if (Input.GetButton("Jump") && IsGrounded())
-        {
+        if ((Input.GetButton("Jump") || AndroidInputButton.instance.isClickedJumpButton) && IsGrounded())
+        { 
             var sample = GameApplication.BuiltInResources.GetSampleByName("jump");
             MonoAudioPlayer.PlayOneShot(sample);
 
@@ -108,6 +135,8 @@ public class PlayerMove : MonoBehaviour
         }
         else if(IsGrounded())
         {
+            AndroidInputButton.instance.isClickedJumpButton = false;
+            
             isJumping = false;
         }
         

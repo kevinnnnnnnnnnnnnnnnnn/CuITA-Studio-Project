@@ -13,8 +13,11 @@ public class Transition : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            TransitionManager.instance.Transition(sceneFrom, sceneTo, targetX, targetY);
+        if (Input.GetKeyDown(KeyCode.E) || AndroidInputButton.instance.isClickedInteractiveButton)
+        {
+            TransitionManager.instance.Transition(sceneFrom, sceneTo, targetX, targetY);            
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

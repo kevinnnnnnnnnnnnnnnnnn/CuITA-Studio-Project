@@ -22,10 +22,9 @@ public class TalkButton : MonoBehaviour
 
     private void Update()
     {
-        if (button.activeSelf && Input.GetKeyDown(KeyCode.E))
+        if (button.activeSelf && (Input.GetKeyDown(KeyCode.E) || AndroidInputButton.instance.isClickedInteractiveButton))
         {
             talkUI.SetActive(true);
         }
     }
-
 }

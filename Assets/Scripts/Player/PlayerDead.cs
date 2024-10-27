@@ -25,6 +25,9 @@ namespace CulTA
             {
                 StartCoroutine(PlayerDeadWait());
                 
+                var sample = GameApplication.BuiltInResources.GetSampleByName("death");
+                MonoAudioPlayer.PlayOneShot(sample);
+                
                 playerMove.enabled = false;
                 player.GetComponent<SpriteRenderer>().enabled = false;
                 player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;

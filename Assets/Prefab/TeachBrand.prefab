@@ -415,7 +415,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 1051072599
+  m_SortingLayerID: -1935054335
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &6773508257618499752
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 10
   m_PresetInfoIsWorld: 1
 --- !u!114 &8523852059906459156
 MonoBehaviour:
