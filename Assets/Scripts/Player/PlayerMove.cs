@@ -111,8 +111,10 @@ public class PlayerMove : MonoBehaviour
     private void Move()
     {
         //移动
-        dirX = Input.GetAxisRaw("Horizontal");
-        dirX = joystick.Horizontal;
+        if (Input.touchCount == 0)
+            dirX = Input.GetAxisRaw("Horizontal");           
+        if (Input.touchCount != 0)
+            dirX = joystick.Horizontal;
         
         _rb.velocity = new Vector2(dirX * moveSpeed, _rb.velocity.y);
         

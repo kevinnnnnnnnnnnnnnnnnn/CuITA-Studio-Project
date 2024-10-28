@@ -3603,7 +3603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_text
-      value: "\u4E0A\u5212\u6447\u6746\u6500\u722C\u68AF\u5B50\uFF0C\u6500\u722C\u65F6\u4E0B\u5212\u6447\u6746\u53EF\u53D6\u6D88\u6500\u722C"
+      value: "\u4E0A\u5212\u6447\u6746\u6216\u6309W\u6500\u722C\u68AF\u5B50\uFF0C\u6500\u722C\u65F6\u4E0B\u5212\u6447\u6746\u6216\u6309S\u53EF\u53D6\u6D88\u6500\u722C"
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_fontSize
@@ -11402,7 +11402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_text
-      value: "\u6447\u6746\u63A7\u5236\u79FB\u52A8\uFF0CX\u4E3A\u8DF3\u8DC3\uFF0C\u6536\u96C6\u5149\u7403\u53BB\u6253\u5F00\u4F20\u9001\u95E8\u5427\uFF0C\u6CE8\u610F\u6389\u5165\u6C34\u91CC\u4F1A\u6B7B\u4EA1\u54E6"
+      value: "\u6447\u6746\u6216A\u3001D\u63A7\u5236\u79FB\u52A8\uFF0CX\u6216\u7A7A\u683C\u4E3A\u8DF3\u8DC3\uFF0C\u6536\u96C6\u5149\u7403\u53BB\u6253\u5F00\u4F20\u9001\u95E8\u5427\uFF0C\u6CE8\u610F\u6389\u5165\u6C34\u91CC\u4F1A\u6B7B\u4EA1\u54E6"
       objectReference: {fileID: 0}
     - target: {fileID: 6537504662931072537, guid: 93d62ddadfed1d6499abe091d52d8266, type: 3}
       propertyPath: m_fontSize
