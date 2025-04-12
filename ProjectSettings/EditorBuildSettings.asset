@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LeaveDreamScene.unity
     guid: ea9e45edd596e3343b3225216ec59fca
+  - enabled: 1
+    path: Assets/Scenes/Origin.unity
+    guid: dbb122659419f414c8bbd2e3b2fae081
+  - enabled: 1
+    path: Assets/Scenes/First.unity
+    guid: 72940104daa08974eb20589aab87e2c1
   m_configObjects: {}

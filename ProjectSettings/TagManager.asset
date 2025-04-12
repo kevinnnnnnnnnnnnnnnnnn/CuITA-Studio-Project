@@ -11,6 +11,9 @@ TagManager:
   - BigSpring
   - SavePosition
   - HugeSpring
+  - TransitionOther
+  - Transition
+  - GetSkills
   layers:
   - Default
   - TransparentFX
@@ -53,6 +56,9 @@ TagManager:
     locked: 0
   - name: Middle
     uniqueID: 2359912961
+    locked: 0
+  - name: Details_Back
+    uniqueID: 2716797881
     locked: 0
   - name: Player
     uniqueID: 1040910281
