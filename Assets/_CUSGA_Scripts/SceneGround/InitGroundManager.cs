@@ -46,7 +46,7 @@ public class InitGroundManager : MonoBehaviour
     {
         InitGround(groundCount, new Vector2(0, 0), GroundType.TransitionSameScene);
 
-#if false //测试场景切换
+#if true //测试场景切换
         OtherSceneTransitionManager.instance.TransitionOtherScene("Origin", testScene, 
             new Vector2(141, 20));
 #endif

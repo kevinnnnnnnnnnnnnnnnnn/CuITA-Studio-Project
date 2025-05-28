@@ -20,6 +20,8 @@ public class PlayerControllerNew : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsGround;
     [SerializeField]
+    private LayerMask stepsGround;
+    [SerializeField]
     private PhysicsMaterial2D noFriction;
     [SerializeField]
     private PhysicsMaterial2D fullFriction;
@@ -121,20 +123,23 @@ public class PlayerControllerNew : MonoBehaviour
 
     private void SlopeCheckHorizontal(Vector2 checkPos)
     {
-        RaycastHit2D slopeHitFront = Physics2D.Raycast(checkPos, transform.right, slopeCheckDistance, whatIsGround);
-        RaycastHit2D slopeHitBack = Physics2D.Raycast(checkPos, -transform.right, slopeCheckDistance, whatIsGround);
+        // 让射线起点低一点，比如往下偏移0.1f
+        Vector2 lowerCheckPos = checkPos + Vector2.down * 1.0f;
+
+        Debug.DrawRay(lowerCheckPos, transform.right * slopeCheckDistance, Color.red);
+        Debug.DrawRay(lowerCheckPos, -transform.right * slopeCheckDistance, Color.green);
+
+        RaycastHit2D slopeHitFront = Physics2D.Raycast(lowerCheckPos, transform.right, slopeCheckDistance, stepsGround);
+        RaycastHit2D slopeHitBack = Physics2D.Raycast(lowerCheckPos, -transform.right, slopeCheckDistance, stepsGround);
 
         if (slopeHitFront)
         {
             isOnSlope = true;
-
             slopeSideAngle = Vector2.Angle(slopeHitFront.normal, Vector2.up);
-
         }
         else if (slopeHitBack)
         {
             isOnSlope = true;
-
             slopeSideAngle = Vector2.Angle(slopeHitBack.normal, Vector2.up);
         }
         else
@@ -142,12 +147,13 @@ public class PlayerControllerNew : MonoBehaviour
             slopeSideAngle = 0.0f;
             isOnSlope = false;
         }
-
     }
+
+
 
     private void SlopeCheckVertical(Vector2 checkPos)
     {      
-        RaycastHit2D hit = Physics2D.Raycast(checkPos, Vector2.down, slopeCheckDistance, whatIsGround);
+        RaycastHit2D hit = Physics2D.Raycast(checkPos, Vector2.down, slopeCheckDistance, stepsGround);
 
         if (hit)
         {

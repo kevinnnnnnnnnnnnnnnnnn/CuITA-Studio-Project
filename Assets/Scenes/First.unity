@@ -1662,7 +1662,7 @@ GameObject:
   - component: {fileID: 1081513815}
   - component: {fileID: 1081513817}
   - component: {fileID: 1081513816}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: UpDown Step
   m_TagString: Untagged
   m_Icon: {fileID: 0}
