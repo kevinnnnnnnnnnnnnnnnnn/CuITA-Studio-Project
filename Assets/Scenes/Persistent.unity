@@ -872,7 +872,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 2064604347}
-  joystickCanvas: {fileID: 1523186890}
   isMoving: 0
   isJumping: 0
   moveSpeed: 7
@@ -937,7 +936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184188126}
   m_Layer: 0
-  m_Name: //MANAGER
+  m_Name: ///MANAGER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1488,7 +1487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 503287860}
   m_Layer: 0
-  m_Name: ///TimeLine Camera
+  m_Name: ////TimeLine Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1653,7 +1652,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3610,12 +3609,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 152972055}
+  joystickCanvas: {fileID: 1523186890}
   changePlayerSceneName: Menu
   isGameStart: 0
   currentScenePlayerPosX: 0
   currentScenePlayerPosY: 0
   inputPlayerName: {fileID: 1895166811}
-  playerName: 
+  playerName: Kevin
 --- !u!1 &1523186887
 GameObject:
   m_ObjectHideFlags: 0
