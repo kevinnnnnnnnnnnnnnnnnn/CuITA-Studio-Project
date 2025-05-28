@@ -1,0 +1,419 @@
+fileFormatVersion: 2
+guid: 9f95a18bfe9b76849b5570c37d9d179f
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: dog_Frame_0
+    originalName: 
+    pivot: {x: 0.043252595, y: 0.7432432}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 170
+      width: 289
+      height: 74
+    spriteID: fc822d85a19b1e644bca65e9242c637b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 170}
+  - name: dog_Frame_1
+    originalName: 
+    pivot: {x: 0.043252595, y: 0.7432432}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 252
+      width: 289
+      height: 74
+    spriteID: 7715c8b894544554bbbb3dbbc4658af6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 252}
+  - name: dog_Frame_2
+    originalName: 
+    pivot: {x: 0.036585364, y: 0.7432432}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 415
+      width: 287
+      height: 74
+    spriteID: 726aea54f2fcac649bb4fea61e92e8af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 415}
+  - name: dog_Frame_3
+    originalName: 
+    pivot: {x: 0.039930556, y: 0.75342464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 578
+      width: 288
+      height: 73
+    spriteID: dbb6c882bb7e95c42af0f629353742fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 578}
+  - name: dog_Frame_4
+    originalName: 
+    pivot: {x: 0.036585364, y: 0.76388884}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 738
+      width: 287
+      height: 72
+    spriteID: d882453779dab204bb562be658dc87d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 738}
+  - name: dog_Frame_5
+    originalName: 
+    pivot: {x: 0.04982818, y: 0.75342464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 334
+      width: 291
+      height: 73
+    spriteID: 5b1e34aa4aa78644387bcac9c0252bd8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 334}
+  - name: dog_Frame_6
+    originalName: 
+    pivot: {x: 0.039930556, y: 0.7333333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 288
+      height: 75
+    spriteID: 1ace76fdb978d9f4ba6487142d81453f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: dog_Frame_7
+    originalName: 
+    pivot: {x: 0.04340278, y: 0.72}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 87
+      width: 288
+      height: 75
+    spriteID: 25f5f0ca30ac2a1488ca65073141da1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 87}
+  - name: dog_Frame_8
+    originalName: 
+    pivot: {x: 0.043252595, y: 0.76712334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 497
+      width: 289
+      height: 73
+    spriteID: a3450dc105711fb4196909717bca799d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 497}
+  - name: dog_Frame_9
+    originalName: 
+    pivot: {x: 0.05631399, y: 0.80281687}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 659
+      width: 293
+      height: 71
+    spriteID: 9b4c0749a14739943b788d9319446d27
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 659}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -468968744
+    name: dog
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: dog_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 4
+        y: -55
+        width: 289
+        height: 74
+      spriteId: fc822d85a19b1e644bca65e9242c637b
+    - name: dog_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 4
+        y: -55
+        width: 289
+        height: 74
+      spriteId: 7715c8b894544554bbbb3dbbc4658af6
+    - name: dog_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 6
+        y: -55
+        width: 287
+        height: 74
+      spriteId: 726aea54f2fcac649bb4fea61e92e8af
+    - name: dog_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 5
+        y: -55
+        width: 288
+        height: 73
+      spriteId: dbb6c882bb7e95c42af0f629353742fa
+    - name: dog_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 6
+        y: -55
+        width: 287
+        height: 72
+      spriteId: d882453779dab204bb562be658dc87d9
+    - name: dog_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 2
+        y: -55
+        width: 291
+        height: 73
+      spriteId: 5b1e34aa4aa78644387bcac9c0252bd8
+    - name: dog_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 5
+        y: -55
+        width: 288
+        height: 75
+      spriteId: 1ace76fdb978d9f4ba6487142d81453f
+    - name: dog_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 4
+        y: -54
+        width: 288
+        height: 75
+      spriteId: 25f5f0ca30ac2a1488ca65073141da1b
+    - name: dog_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 4
+        y: -56
+        width: 289
+        height: 73
+      spriteId: a3450dc105711fb4196909717bca799d
+    - name: dog_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: -57
+        width: 293
+        height: 71
+      spriteId: 9b4c0749a14739943b788d9319446d27
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 33, y: 26}
