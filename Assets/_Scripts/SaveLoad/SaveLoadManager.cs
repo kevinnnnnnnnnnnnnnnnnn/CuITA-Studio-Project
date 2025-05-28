@@ -5,6 +5,7 @@ using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
 
+
 public class SaveLoadManager : MonoBehaviour
 {
     public static SaveLoadManager instance;
